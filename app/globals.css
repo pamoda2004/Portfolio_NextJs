@@ -113,3 +113,34 @@ a {
       var(--background);
   }
 }
+
+
+/* Phase 4 final polish */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+}

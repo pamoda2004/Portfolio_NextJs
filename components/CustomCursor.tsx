@@ -27,9 +27,13 @@ export default function CustomCursor() {
       window.matchMedia("(pointer: fine)").matches &&
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    setEnabled(canUseCursor);
+    const frame = requestAnimationFrame(() => {
+      setEnabled(canUseCursor);
+    });
 
-    if (!canUseCursor) return;
+    if (!canUseCursor) {
+      return () => cancelAnimationFrame(frame);
+    }
 
     function handleMouseMove(event: MouseEvent) {
       mouseX.set(event.clientX - 10);
@@ -65,6 +69,7 @@ export default function CustomCursor() {
     document.addEventListener("mouseout", handleMouseOut);
 
     return () => {
+      cancelAnimationFrame(frame);
       window.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseover", handleMouseOver);
       document.removeEventListener("mouseout", handleMouseOut);

@@ -5,17 +5,19 @@ import { useEffect, useState } from "react";
 import { profile } from "@/lib/data";
 
 export default function Loader() {
-  const [showLoader, setShowLoader] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem("portfolio-loader-shown");
 
     if (alreadyShown) {
-      setShowLoader(false);
-      return;
+      const frame = requestAnimationFrame(() => {
+        setShowLoader(false);
+      });
+
+      return () => cancelAnimationFrame(frame);
     }
 
-    setShowLoader(true);
     sessionStorage.setItem("portfolio-loader-shown", "true");
 
     const timer = setTimeout(() => {
