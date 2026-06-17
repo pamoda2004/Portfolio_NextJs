@@ -1,4 +1,3 @@
-import { profile } from "@/lib/data";
 import MagneticButton from "./MagneticButton";
 import Reveal from "./Reveal";
 
@@ -22,7 +21,7 @@ export default function ContactCTA() {
             </p>
 
             <div className="mt-8 flex justify-center">
-              <MagneticButton href={`mailto:${profile.email}`}>
+              <MagneticButton href="/contact">
                 Let&apos;s Talk
               </MagneticButton>
             </div>

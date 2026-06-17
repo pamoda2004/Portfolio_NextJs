@@ -20,7 +20,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
       <Link
         href={`/work/${project.slug}`}
-        className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white/55 p-3"
+        data-cursor="hover"
+        className="group block overflow-hidden rounded-[2rem] border border-black/10 bg-white/55 p-3 transition-shadow duration-300 hover:shadow-2xl"
       >
         <div className="relative overflow-hidden rounded-[1.5rem] bg-neutral-200">
           <Image

@@ -1,12 +1,11 @@
 import { experiences } from "@/lib/data";
 import Reveal from "./Reveal";
+import SectionParallaxWord from "./SectionParallaxWord";
 
 export default function Experience() {
   return (
     <section id="experience" className="relative overflow-hidden bg-[#1c1c1a] py-24 text-white">
-      <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 text-[16vw] font-black uppercase leading-none text-white/[0.04]">
-        Experience
-      </div>
+      <SectionParallaxWord text="Experience" dark className="text-[16vw]" />
 
       <div className="container-main relative">
         <Reveal>
@@ -29,7 +28,9 @@ export default function Experience() {
         <div className="divide-y divide-white/10">
           {experiences.map((item, index) => (
             <Reveal key={item.company} delay={index * 0.08}>
-              <div className="grid gap-3 py-7 transition hover:text-white md:grid-cols-3">
+              <div className="group relative grid gap-3 py-7 transition hover:text-white md:grid-cols-3">
+                <span className="absolute bottom-0 left-0 h-px w-0 bg-white transition-all duration-500 group-hover:w-full" />
+
                 <p className="text-white/50">{item.date}</p>
                 <h3 className="text-2xl font-bold">{item.company}</h3>
                 <p className="text-white/60">{item.role}</p>

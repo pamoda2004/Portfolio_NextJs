@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Work", href: "/work" },
-  { label: "Services", href: "/#services" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Experience", href: "/experience" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -41,7 +41,7 @@ export default function Header() {
         </nav>
 
         <Link
-          href="/#contact"
+          href="/contact"
           className="hidden rounded-full bg-black px-5 py-2 text-sm font-semibold text-white transition hover:scale-105 md:inline-flex"
         >
           Let&apos;s Talk
@@ -58,21 +58,39 @@ export default function Header() {
 
       {open && (
         <motion.div
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="container-main mt-3 rounded-3xl border border-black/10 bg-[#f4f4f1] p-5 shadow-xl md:hidden"
+          initial={{ opacity: 0, y: -20, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: -20, scale: 0.98 }}
+          transition={{ duration: 0.35 }}
+          className="fixed inset-x-4 top-20 z-50 rounded-[2rem] border border-black/10 bg-[#f4f4f1] p-6 shadow-2xl md:hidden"
         >
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                onClick={() => setOpen(false)}
-                key={link.href}
-                href={link.href}
-                className="text-lg font-semibold"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="flex min-h-[55vh] flex-col justify-between">
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.06 }}
+                >
+                  <Link
+                    onClick={() => setOpen(false)}
+                    href={link.href}
+                    className="block rounded-2xl px-4 py-4 text-4xl font-black uppercase tracking-[-0.05em] transition hover:bg-black hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <Link
+              onClick={() => setOpen(false)}
+              href="/contact"
+              className="mt-8 inline-flex w-full justify-center rounded-full bg-black px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
+            >
+              Let&apos;s Talk
+            </Link>
           </div>
         </motion.div>
       )}

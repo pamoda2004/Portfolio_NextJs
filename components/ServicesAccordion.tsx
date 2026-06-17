@@ -6,15 +6,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { services } from "@/lib/data";
 import { useState } from "react";
 import Reveal from "./Reveal";
+import SectionParallaxWord from "./SectionParallaxWord";
 
 export default function ServicesAccordion() {
   const [active, setActive] = useState(0);
 
   return (
     <section id="services" className="relative py-24">
-      <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 text-[18vw] font-black uppercase leading-none text-black/[0.035]">
-        Service
-      </div>
+      <SectionParallaxWord text="Service" />
 
       <div className="container-main relative">
         <Reveal>

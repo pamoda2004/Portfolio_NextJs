@@ -49,3 +49,67 @@ body {
     -webkit-text-stroke: 1px #111111;
   }
 }
+
+
+
+/* Phase 3 mobile and polish fixes */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: default;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-main {
+    width: min(100% - 24px, 1180px);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 20% 8%, rgba(0, 0, 0, 0.05), transparent 22%),
+      var(--background);
+  }
+}
