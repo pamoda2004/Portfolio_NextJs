@@ -8,17 +8,22 @@
   --dark: #1c1c1a;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: auto;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
-  overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: clip;
   background:
     radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.06), transparent 24%),
     radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.05), transparent 22%),
@@ -29,35 +34,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-::selection {
-  background: #111111;
-  color: #ffffff;
-}
+/* Fallback for older browsers */
+@supports not (overflow: clip) {
 
-.outline-text {
-  color: transparent;
-  -webkit-text-stroke: 2px #111111;
-}
-
-.container-main {
-  width: min(1180px, calc(100% - 32px));
-  margin-inline: auto;
-}
-
-@media (max-width: 640px) {
-  .outline-text {
-    -webkit-text-stroke: 1px #111111;
+  html,
+  body {
+    overflow-x: hidden;
   }
 }
 
-
-
-/* Phase 3 mobile and polish fixes */
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: clip;
+::selection {
+  background: #111111;
+  color: #ffffff;
 }
 
 img,
@@ -72,6 +60,18 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #111111;
+  text-stroke: 2px #111111;
+}
+
+.container-main {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+/* Hide horizontal filter scrollbar */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -81,42 +81,14 @@ a {
   display: none;
 }
 
+/* Desktop custom cursor support */
 @media (pointer: fine) {
   body {
     cursor: default;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .container-main {
-    width: min(100% - 24px, 1180px);
-  }
-
-  body {
-    background:
-      radial-gradient(circle at 20% 8%, rgba(0, 0, 0, 0.05), transparent 22%),
-      var(--background);
-  }
-}
-
-
 /* Phase 4 final polish */
-
 .text-balance {
   text-wrap: balance;
 }
@@ -137,10 +109,66 @@ a {
   background-size: 28px 28px;
 }
 
+/* Mobile animation and layout support */
 @media (max-width: 768px) {
+
   h1,
   h2 {
     word-break: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container-main {
+    width: min(100% - 24px, 1180px);
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 20% 8%, rgba(0, 0, 0, 0.05), transparent 22%),
+      var(--background);
+  }
+
+  .outline-text {
+    -webkit-text-stroke: 1.1px #111111;
+    text-stroke: 1.1px #111111;
+  }
+
+  [data-mobile-animate="true"] {
+    will-change: transform, opacity;
+  }
+}
+
+/* Accessibility: only reduce animations when user enabled Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Final mobile text visibility fix */
+@media (max-width: 640px) {
+
+  h1,
+  h2 {
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .container-main {
+    width: min(100% - 24px, 1180px);
   }
 }

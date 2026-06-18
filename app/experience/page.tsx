@@ -10,17 +10,17 @@ export const metadata = {
 export default function ExperiencePage() {
   return (
     <main className="pt-32">
-      <section className="container-main py-16">
+      <section className="container-main py-10 md:py-16">
         <Reveal>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
             /Experience
           </p>
 
-          <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-8xl">
+          <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-7xl">
             Learning by building real projects
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600 md:mt-6 md:text-lg md:leading-8">
             My journey is focused on web development, UI design, academic
             projects, and continuous practice with modern frontend tools.
           </p>

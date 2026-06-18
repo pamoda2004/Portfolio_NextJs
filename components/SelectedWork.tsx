@@ -31,7 +31,7 @@ export default function SelectedWork() {
                 /Selected Work
               </p>
 
-              <h2 className="text-5xl font-black tracking-[-0.05em] md:text-7xl">
+              <h2 className="text-5xl font-black tracking-[-0.05em] md:text-6xl">
                 Recent Projects
               </h2>
             </div>
@@ -69,7 +69,7 @@ export default function SelectedWork() {
 
         <motion.div
           layout
-          className="grid gap-6 md:grid-cols-2"
+          className="grid gap-5 md:grid-cols-2"
         >
           {filteredProjects.map((project, index) => (
             <motion.div

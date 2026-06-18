@@ -12,23 +12,23 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="pt-32">
-      <section className="container-main py-16">
+      <section className="container-main py-10 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_420px]">
           <Reveal>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
               /Contact
             </p>
 
-            <h1 className="max-w-4xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-8xl">
+            <h1 className="max-w-4xl text-[clamp(2.7rem,11.5vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.055em] sm:text-[clamp(3.2rem,10vw,6rem)] md:text-8xl md:leading-none">
               Let&apos;s build something great
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600 md:mt-6 md:text-lg md:leading-8">
               Have a portfolio, website, dashboard, or modern web project in
               mind? Send me a message and let&apos;s discuss the idea.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-3 md:mt-10 md:gap-4">
               <Link
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:scale-105"
@@ -48,8 +48,8 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <div className="rounded-[2rem] border border-black/10 bg-white/60 p-6 shadow-xl">
-              <h2 className="text-3xl font-black tracking-[-0.04em]">
+            <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-4 shadow-xl md:p-6">
+              <h2 className="text-2xl font-black tracking-[-0.04em] md:text-3xl">
                 Contact Details
               </h2>
 

@@ -20,14 +20,14 @@ export default function RelatedProjects({ currentSlug }: RelatedProjectsProps) {
               /More Work
             </p>
 
-            <h2 className="text-5xl font-black tracking-[-0.05em] md:text-7xl">
+            <h2 className="text-5xl font-black tracking-[-0.05em] md:text-5xl">
               Related Projects
             </h2>
           </div>
         </div>
       </Reveal>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         {relatedProjects.map((project, index) => (
           <Reveal key={project.slug} delay={index * 0.08}>
             <ProjectCard project={project} />

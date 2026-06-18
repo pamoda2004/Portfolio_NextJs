@@ -58,7 +58,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <main className="pt-32">
-      <section className="container-main py-12">
+      <section className="container-main py-8 md:py-12">
         <Reveal>
           <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-center">
             <Link
@@ -76,17 +76,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
         </Reveal>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_380px] lg:items-end">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
           <Reveal>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
               {project.category}
             </p>
 
-            <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-8xl">
+            <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-6xl">
               {project.title}
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-600 md:text-lg md:leading-8">
               {project.description}
             </p>
 
@@ -111,13 +111,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-[2rem] border border-black/10 bg-white/60 p-6 shadow-xl">
-              <div className="border-b border-black/10 py-4">
+            <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-5 shadow-xl">
+              <div className="border-b border-black/10 py-3">
                 <p className="text-sm text-neutral-500">Role</p>
                 <p className="font-bold">{project.role}</p>
               </div>
 
-              <div className="border-b border-black/10 py-4">
+              <div className="border-b border-black/10 py-3">
                 <p className="text-sm text-neutral-500">Timeline</p>
                 <p className="font-bold">{project.timeline}</p>
               </div>
@@ -141,14 +141,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="mt-12 overflow-hidden rounded-[2rem] border border-black/10 bg-white/60 p-3 shadow-xl">
+          <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-2.5 shadow-xl">
             <Image
               src={project.image}
               alt={project.title}
-              width={1400}
-              height={900}
+              width={1200}
+              height={760}
               priority
-              className="aspect-[16/10] w-full rounded-[1.5rem] object-cover"
+              className="aspect-[16/9] w-full rounded-[1.25rem] object-cover"
             />
           </div>
         </Reveal>
@@ -213,7 +213,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               /Screens
             </p>
 
-            <h2 className="mb-10 text-5xl font-black tracking-[-0.05em] md:text-7xl">
+            <h2 className="mb-10 text-5xl font-black tracking-[-0.05em] md:text-5xl">
               Project Screens
             </h2>
           </Reveal>
@@ -221,13 +221,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="space-y-8">
             {project.gallery.map((image, index) => (
               <Reveal key={image} delay={index * 0.08}>
-                <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-white/60 p-3 shadow-xl">
+                <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-2.5 shadow-xl">
                   <Image
                     src={image}
                     alt={`${project.title} screen ${index + 1}`}
                     width={1400}
                     height={900}
-                    className="aspect-[16/10] w-full rounded-[1.5rem] object-cover"
+                    className="aspect-[16/9] w-full rounded-[1.25rem] object-cover"
                   />
                 </div>
               </Reveal>

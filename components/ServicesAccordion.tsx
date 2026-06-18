@@ -9,7 +9,7 @@ import Reveal from "./Reveal";
 import SectionParallaxWord from "./SectionParallaxWord";
 
 export default function ServicesAccordion() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState<number | null>(0);
 
   return (
     <section id="services" className="relative py-24">
@@ -20,7 +20,7 @@ export default function ServicesAccordion() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
             /Service
           </p>
-          <h2 className="mb-12 text-5xl font-black tracking-[-0.05em] md:text-7xl">
+          <h2 className="mb-12 text-5xl font-black tracking-[-0.05em] md:text-6xl">
             What I Do
           </h2>
         </Reveal>
@@ -32,10 +32,10 @@ export default function ServicesAccordion() {
             return (
               <div key={service.title} className="border-b border-black/10 last:border-b-0">
                 <button
-                  onClick={() => setActive(index)}
-                  className="flex w-full items-center justify-between px-5 py-6 text-left md:px-8"
+                  onClick={() => setActive(isOpen ? null : index)}
+                  className="flex w-full items-center justify-between gap-4 px-4 py-5 text-left sm:px-5 md:px-8 md:py-6"
                 >
-                  <span className="text-2xl font-bold md:text-4xl">
+                  <span className="text-2xl font-bold md:text-2xl">
                     {service.title}
                   </span>
 
@@ -63,7 +63,7 @@ export default function ServicesAccordion() {
                           alt={service.title}
                           width={500}
                           height={350}
-                          className="aspect-[4/3] w-full rounded-2xl object-cover"
+                          className="aspect-[4/3] w-full rounded-2xl object-cover md:max-h-none max-h-56"
                         />
                       </div>
                     </motion.div>

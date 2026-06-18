@@ -18,17 +18,28 @@ export default function MagneticButton({
   const isDark = variant === "dark";
 
   return (
-    <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.98 }}>
+    <motion.div
+      whileHover={{ scale: 1.04, y: -2 }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ duration: 0.22 }}
+    >
       <Link
         href={href}
+        data-cursor="hover"
         className={
           isDark
-            ? "inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:shadow-xl"
-            : "inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:shadow-xl"
+            ? "inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:shadow-xl active:shadow-lg"
+            : "inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:shadow-xl active:shadow-lg"
         }
       >
         {children}
-        <ArrowUpRight size={18} />
+        <motion.span
+          aria-hidden="true"
+          whileHover={{ x: 3, y: -3 }}
+          transition={{ duration: 0.2 }}
+        >
+          <ArrowUpRight size={18} />
+        </motion.span>
       </Link>
     </motion.div>
   );

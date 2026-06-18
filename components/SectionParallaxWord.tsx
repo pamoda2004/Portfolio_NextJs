@@ -30,14 +30,15 @@ export default function SectionParallaxWord({
 
     if (reduceMotion) return;
 
+    const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+    const moveAmount = isSmallScreen ? 3 : 8;
+
     const ctx = gsap.context(() => {
       gsap.fromTo(
         element,
+        { xPercent: -moveAmount },
         {
-          xPercent: -8,
-        },
-        {
-          xPercent: 8,
+          xPercent: moveAmount,
           ease: "none",
           scrollTrigger: {
             trigger: element,

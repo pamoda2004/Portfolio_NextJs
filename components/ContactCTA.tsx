@@ -12,11 +12,11 @@ export default function ContactCTA() {
               Available for New Project
             </div>
 
-            <h2 className="mx-auto max-w-4xl text-5xl font-black uppercase leading-none tracking-[-0.06em] md:text-8xl">
+            <h2 className="mx-auto max-w-4xl text-5xl font-black uppercase leading-none tracking-[-0.06em] md:text-6xl">
               Have a project in mind?
             </h2>
 
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-neutral-600">
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-neutral-500">
               Let&apos;s build a clean, fast, and modern website together.
             </p>
 
