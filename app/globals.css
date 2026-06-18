@@ -36,6 +36,7 @@ body {
 }
 
 @supports not (overflow: clip) {
+
   html,
   body {
     overflow-x: hidden;
@@ -107,6 +108,7 @@ a {
 
 /* Tablet and mobile typography */
 @media (max-width: 768px) {
+
   h1,
   h2 {
     word-break: normal;
