@@ -6,7 +6,7 @@ import MagneticButton from "./MagneticButton";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden pb-16 pt-32">
+    <section className="relative overflow-hidden pb-8 pt-32 md:min-h-screen md:pb-10">
       <div className="container-main">
         <div className="max-w-6xl">
           <motion.p
@@ -97,7 +97,7 @@ export default function Hero() {
               },
             },
           }}
-          className="mt-10 flex flex-wrap gap-3 border-t border-black/10 pt-5 sm:gap-4 md:mt-12 md:pt-6"
+          className="mt-8 flex flex-nowrap items-center gap-5 overflow-x-auto border-t border-black/10 pt-4 scrollbar-hide sm:gap-4 md:mt-12 md:pt-6"
         >
           {socialLinks.map((link) => (
             <motion.a
@@ -107,7 +107,7 @@ export default function Hero() {
                 show: { opacity: 1, y: 0 },
               }}
               href={link.href}
-              className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-500 transition hover:text-black sm:text-sm sm:tracking-widest"
+              className="shrink-0 text-[11px] font-bold uppercase tracking-[0.16em] text-neutral-500 transition hover:text-black sm:text-sm sm:tracking-widest"
             >
               {link.label}
             </motion.a>
