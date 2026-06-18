@@ -1,11 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Work", href: "/work" },
   { label: "Services", href: "/services" },
   { label: "Experience", href: "/experience" },
@@ -17,6 +20,10 @@ export default function Header() {
   const pathname = usePathname();
 
   function isActive(href: string) {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
     if (href === "/work") {
       return pathname === "/work" || pathname.startsWith("/work/");
     }
@@ -32,17 +39,32 @@ export default function Header() {
       className="fixed left-0 top-0 z-50 w-full px-4 py-4"
     >
       <div className="container-main flex items-center justify-between rounded-full border border-black/10 bg-[#f4f4f1]/90 px-3 py-3 shadow-[0_12px_35px_rgba(0,0,0,0.08)] backdrop-blur-md sm:px-4">
-        <Link
-          href="/"
-          onClick={() => setOpen(false)}
-          className="flex items-center gap-2 rounded-full bg-white/70 px-3 py-2 text-sm font-semibold shadow-sm sm:px-4"
-        >
-          <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-          <span className="hidden sm:inline">Available for New Project</span>
-          <span className="sm:hidden">Available</span>
-        </Link>
+        {/* Profile tab - no navigation */}
+        <div className="flex items-center gap-2 rounded-full bg-white/80 py-1.5 pl-1.5 pr-3 text-sm font-semibold shadow-sm ring-1 ring-black/5 sm:gap-3 sm:pr-4">
+          <span className="relative grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border border-black/10 bg-white shadow-sm sm:h-11 sm:w-11">
+            <Image
+              src="/images/profile.png"
+              alt="Pamoda Jayathilaka"
+              width={56}
+              height={56}
+              priority
+              className="h-full w-full object-cover object-center"
+            />
+          </span>
 
-        <nav className="hidden items-center gap-8 md:flex">
+          <span className="flex flex-col leading-tight">
+            <span className="hidden max-w-[135px] truncate text-xs font-bold text-black sm:inline lg:max-w-none">
+              Pamoda Jayathilaka
+            </span>
+
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-neutral-600">
+              <span className="h-2 w-2 rounded-full bg-green-500" />
+              Available
+            </span>
+          </span>
+        </div>
+
+        <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => {
             const active = isActive(link.href);
 
@@ -64,9 +86,10 @@ export default function Header() {
 
         <Link
           href="/contact"
-          className="hidden rounded-full bg-black px-5 py-2 text-sm font-semibold text-white transition hover:scale-105 md:inline-flex"
+          className="hidden items-center gap-2 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 md:inline-flex"
         >
           Let&apos;s Talk
+          <ArrowUpRight size={16} strokeWidth={2.5} />
         </Link>
 
         <button
@@ -98,13 +121,23 @@ export default function Header() {
             >
               <div className="rounded-[1.35rem] border border-black/10 bg-white/75 p-3">
                 <div className="mb-3 flex items-center justify-between border-b border-black/10 px-2 pb-3">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
-                      Menu
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-neutral-700">
-                      Navigate portfolio
-                    </p>
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/images/profile.png"
+                      alt="Pamoda Jayathilaka"
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 rounded-full border border-black/10 object-cover object-center shadow-sm"
+                    />
+
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
+                        Menu
+                      </p>
+                      <p className="mt-1 text-sm font-semibold text-neutral-700">
+                        Navigate portfolio
+                      </p>
+                    </div>
                   </div>
 
                   <button
@@ -132,22 +165,23 @@ export default function Header() {
                           href={link.href}
                           className={
                             active
-                              ? "group flex items-center justify-between rounded-2xl bg-black px-4 py-4 text-white shadow-lg transition"
-                              : "group flex items-center justify-between rounded-2xl bg-white px-4 py-4 text-black transition hover:bg-black hover:text-white"
+                              ? "group flex items-center justify-between rounded-2xl bg-black px-4 py-3.5 text-white shadow-lg transition"
+                              : "group flex items-center justify-between rounded-2xl bg-white px-4 py-3.5 text-black transition hover:bg-black hover:text-white"
                           }
                         >
-                          <span className="text-2xl font-black uppercase tracking-[-0.04em]">
+                          <span className="text-xl font-black uppercase tracking-[-0.035em] sm:text-2xl">
                             {link.label}
                           </span>
 
                           <span
+                            aria-hidden="true"
                             className={
                               active
-                                ? "grid h-8 w-8 place-items-center rounded-full bg-white text-sm font-bold text-black transition"
-                                : "grid h-8 w-8 place-items-center rounded-full bg-black text-sm font-bold text-white transition group-hover:bg-white group-hover:text-black"
+                                ? "grid h-8 w-8 place-items-center rounded-full bg-white text-black transition"
+                                : "grid h-8 w-8 place-items-center rounded-full bg-black text-white transition group-hover:bg-white group-hover:text-black"
                             }
                           >
-                            ↗
+                            <ArrowUpRight size={16} strokeWidth={2.6} />
                           </span>
                         </Link>
                       </motion.div>
@@ -158,10 +192,10 @@ export default function Header() {
                 <Link
                   onClick={() => setOpen(false)}
                   href="/contact"
-                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_16px_40px_rgba(0,0,0,0.25)]"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-black px-6 py-3.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(0,0,0,0.25)] sm:text-sm"
                 >
                   Let&apos;s Talk
-                  <span aria-hidden="true">↗</span>
+                  <ArrowUpRight aria-hidden="true" size={17} strokeWidth={2.6} />
                 </Link>
               </div>
             </motion.div>
