@@ -15,11 +15,11 @@ export default function ContactPage() {
       <section className="container-main py-10 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_420px]">
           <Reveal>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]">
               /Contact
             </p>
 
-            <h1 className="max-w-4xl text-[clamp(2.7rem,11.5vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.055em] sm:text-[clamp(3.2rem,10vw,6rem)] md:text-8xl md:leading-none">
+            <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-8xl md:leading-none md:tracking-[-0.06em]">
               Let&apos;s build something great
             </h1>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10 md:gap-4">
               <Link
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 sm:px-6"
               >
                 <Mail size={18} />
                 Send Email
@@ -39,7 +39,7 @@ export default function ContactPage() {
 
               <Link
                 href="/work"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-6 py-3 text-sm font-semibold transition hover:bg-black hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-5 py-3 text-sm font-semibold transition hover:bg-black hover:text-white sm:px-6"
               >
                 View Work
                 <Send size={18} />
@@ -49,12 +49,12 @@ export default function ContactPage() {
 
           <Reveal delay={0.12}>
             <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-4 shadow-xl md:p-6">
-              <h2 className="text-2xl font-black tracking-[-0.04em] md:text-3xl">
+              <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                 Contact Details
               </h2>
 
               <div className="mt-6 space-y-5">
-                <div className="rounded-2xl border border-black/10 p-4">
+                <div className="rounded-2xl border border-black/10 p-3.5 sm:p-4">
                   <p className="mb-2 text-sm font-semibold text-neutral-500">
                     Email
                   </p>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   </Link>
                 </div>
 
-                <div className="rounded-2xl border border-black/10 p-4">
+                <div className="rounded-2xl border border-black/10 p-3.5 sm:p-4">
                   <p className="mb-2 text-sm font-semibold text-neutral-500">
                     Location
                   </p>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-black/10 p-4">
+                <div className="rounded-2xl border border-black/10 p-3.5 sm:p-4">
                   <p className="mb-3 text-sm font-semibold text-neutral-500">
                     Social Links
                   </p>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                       <Link
                         key={link.label}
                         href={link.href}
-                        className="rounded-full border border-black/10 px-4 py-2 text-sm font-semibold transition hover:bg-black hover:text-white"
+                        className="rounded-full border border-black/10 px-3.5 py-2 text-xs font-semibold transition hover:bg-black hover:text-white sm:px-4 sm:text-sm"
                       >
                         {link.label}
                       </Link>

@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import SmoothScroll from "@/components/SmoothScroll";
 import Loader from "@/components/Loader";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextjsportfolio-gray.vercel.app"),
@@ -57,7 +64,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={geist.variable}>
         <SmoothScroll />
         <Loader />
         <PageTransition />

@@ -12,11 +12,11 @@ export default function ExperiencePage() {
     <main className="pt-32">
       <section className="container-main py-10 md:py-16">
         <Reveal>
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]">
             /Experience
           </p>
 
-          <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-7xl">
+          <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-8xl md:leading-none md:tracking-[-0.06em]">
             Learning by building real projects
           </h1>
 
@@ -27,15 +27,15 @@ export default function ExperiencePage() {
         </Reveal>
       </section>
 
-      <section className="bg-[#1c1c1a] py-20 text-white">
+      <section className="bg-[#1c1c1a] py-12 text-white md:py-20">
         <div className="container-main">
           <div className="divide-y divide-white/10">
             {experiences.map((item, index) => (
               <Reveal key={item.company} delay={index * 0.08}>
-                <div className="grid gap-4 py-8 md:grid-cols-3 md:items-center">
+                <div className="grid gap-3 py-6 md:grid-cols-3 md:items-center md:gap-4 md:py-8">
                   <p className="text-white/50">{item.date}</p>
 
-                  <h2 className="text-3xl font-black tracking-[-0.04em]">
+                  <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                     {item.company}
                   </h2>
 
@@ -47,12 +47,14 @@ export default function ExperiencePage() {
         </div>
       </section>
 
-      <section className="container-main py-20">
+      <section className="container-main py-12 md:py-20">
         <div className="grid gap-6 md:grid-cols-3">
           <Reveal>
-            <div className="rounded-[2rem] border border-black/10 bg-white/60 p-6">
-              <h3 className="text-3xl font-black">Frontend</h3>
-              <p className="mt-3 leading-7 text-neutral-600">
+            <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
+              <h3 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl">
+                Frontend
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base md:leading-7">
                 React, Next.js, TypeScript, Tailwind CSS, responsive layouts,
                 and component-based development.
               </p>
@@ -60,9 +62,11 @@ export default function ExperiencePage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-[2rem] border border-black/10 bg-white/60 p-6">
-              <h3 className="text-3xl font-black">Design</h3>
-              <p className="mt-3 leading-7 text-neutral-600">
+            <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
+              <h3 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl">
+                Design
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base md:leading-7">
                 Minimal layouts, typography systems, clean spacing, and modern
                 portfolio interfaces.
               </p>
@@ -70,9 +74,11 @@ export default function ExperiencePage() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="rounded-[2rem] border border-black/10 bg-white/60 p-6">
-              <h3 className="text-3xl font-black">Projects</h3>
-              <p className="mt-3 leading-7 text-neutral-600">
+            <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
+              <h3 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl">
+                Projects
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base md:leading-7">
                 Portfolio websites, e-commerce systems, dashboards, and
                 AI-assisted web applications.
               </p>

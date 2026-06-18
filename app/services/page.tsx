@@ -14,11 +14,11 @@ export default function ServicesPage() {
     <main className="pt-32">
       <section className="container-main py-10 md:py-16">
         <Reveal>
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]">
             /Services
           </p>
 
-          <h1 className="max-w-5xl text-[clamp(2.65rem,11.5vw,4.7rem)] font-black uppercase leading-[0.98] tracking-[-0.055em] sm:text-[clamp(3.2rem,10vw,6rem)] md:text-7xl md:leading-none">
+          <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-8xl md:leading-none md:tracking-[-0.06em]">
             Design and development services
           </h1>
 
@@ -41,7 +41,7 @@ export default function ServicesPage() {
                 />
 
                 <div className="p-4">
-                  <h2 className="text-2xl font-black tracking-[-0.04em] md:text-3xl">
+                  <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                     {service.title}
                   </h2>
 

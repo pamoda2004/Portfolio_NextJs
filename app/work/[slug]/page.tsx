@@ -78,11 +78,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
           <Reveal>
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]">
               {project.category}
             </p>
 
-            <h1 className="max-w-5xl text-6xl font-black uppercase leading-none tracking-[-0.06em] md:text-6xl">
+            <h1 className="max-w-4xl text-[clamp(2.55rem,10vw,5rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,8vw,6rem)] md:tracking-[-0.06em]">
               {project.title}
             </h1>
 
@@ -90,11 +90,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-7 flex flex-wrap gap-3 md:mt-8 md:gap-4">
               <Link
                 href={project.liveUrl}
                 target="_blank"
-                className="inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:scale-105 sm:px-6"
               >
                 View Project
                 <ArrowUpRight size={18} />
@@ -102,7 +102,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-6 py-3 text-sm font-semibold transition hover:bg-black hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-5 py-3 text-sm font-semibold transition hover:bg-black hover:text-white sm:px-6"
               >
                 Contact Me
                 <ArrowUpRight size={18} />
@@ -154,15 +154,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </Reveal>
       </section>
 
-      <section className="container-main py-20">
+      <section className="container-main py-12 md:py-20">
         <div className="grid gap-6 md:grid-cols-3">
           <Reveal>
-            <div className="h-full rounded-[2rem] border border-black/10 bg-white/60 p-6">
+            <div className="h-full rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-neutral-500">
                 /Overview
               </p>
 
-              <h2 className="text-3xl font-black tracking-[-0.04em]">
+              <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                 Project Overview
               </h2>
 
@@ -173,12 +173,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="h-full rounded-[2rem] border border-black/10 bg-white/60 p-6">
+            <div className="h-full rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-neutral-500">
                 /Problem
               </p>
 
-              <h2 className="text-3xl font-black tracking-[-0.04em]">
+              <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                 The Challenge
               </h2>
 
@@ -189,12 +189,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="h-full rounded-[2rem] border border-black/10 bg-white/60 p-6">
+            <div className="h-full rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-neutral-500">
                 /Solution
               </p>
 
-              <h2 className="text-3xl font-black tracking-[-0.04em]">
+              <h2 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl md:tracking-[-0.04em]">
                 The Solution
               </h2>
 
@@ -206,14 +206,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-main">
           <Reveal>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
               /Screens
             </p>
 
-            <h2 className="mb-10 text-5xl font-black tracking-[-0.05em] md:text-5xl">
+            <h2 className="mb-8 text-[clamp(2.25rem,9vw,3.5rem)] font-black leading-[1] tracking-[-0.04em] md:mb-10 md:text-5xl md:tracking-[-0.05em]">
               Project Screens
             </h2>
           </Reveal>

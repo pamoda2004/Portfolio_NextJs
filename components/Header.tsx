@@ -132,19 +132,19 @@ export default function Header() {
                           href={link.href}
                           className={
                             active
-                              ? "group flex items-center justify-between rounded-2xl bg-black px-4 py-3.5 text-white shadow-lg transition"
-                              : "group flex items-center justify-between rounded-2xl bg-white px-4 py-3.5 text-black transition hover:bg-black hover:text-white"
+                              ? "group flex items-center justify-between rounded-2xl bg-black px-4 py-4 text-white shadow-lg transition"
+                              : "group flex items-center justify-between rounded-2xl bg-white px-4 py-4 text-black transition hover:bg-black hover:text-white"
                           }
                         >
-                          <span className="text-xl font-black uppercase tracking-[-0.035em] sm:text-2xl">
+                          <span className="text-2xl font-black uppercase tracking-[-0.04em]">
                             {link.label}
                           </span>
 
                           <span
                             className={
                               active
-                                ? "grid h-7 w-7 place-items-center rounded-full bg-white text-xs font-bold text-black transition"
-                                : "grid h-7 w-7 place-items-center rounded-full bg-black text-xs font-bold text-white transition group-hover:bg-white group-hover:text-black"
+                                ? "grid h-8 w-8 place-items-center rounded-full bg-white text-sm font-bold text-black transition"
+                                : "grid h-8 w-8 place-items-center rounded-full bg-black text-sm font-bold text-white transition group-hover:bg-white group-hover:text-black"
                             }
                           >
                             ↗
@@ -158,7 +158,7 @@ export default function Header() {
                 <Link
                   onClick={() => setOpen(false)}
                   href="/contact"
-                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-black px-6 py-3.5 text-xs font-black uppercase tracking-[0.22em] text-white shadow-[0_16px_40px_rgba(0,0,0,0.25)] sm:text-sm"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-black px-6 py-4 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_16px_40px_rgba(0,0,0,0.25)]"
                 >
                   Let&apos;s Talk
                   <span aria-hidden="true">↗</span>

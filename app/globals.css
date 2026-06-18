@@ -29,14 +29,13 @@ body {
     radial-gradient(circle at 80% 10%, rgba(0, 0, 0, 0.05), transparent 22%),
     var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Fallback for older browsers */
 @supports not (overflow: clip) {
-
   html,
   body {
     overflow-x: hidden;
@@ -71,7 +70,6 @@ a {
   margin-inline: auto;
 }
 
-/* Hide horizontal filter scrollbar */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -81,14 +79,12 @@ a {
   display: none;
 }
 
-/* Desktop custom cursor support */
 @media (pointer: fine) {
   body {
     cursor: default;
   }
 }
 
-/* Phase 4 final polish */
 .text-balance {
   text-wrap: balance;
 }
@@ -109,9 +105,8 @@ a {
   background-size: 28px 28px;
 }
 
-/* Mobile animation and layout support */
+/* Tablet and mobile typography */
 @media (max-width: 768px) {
-
   h1,
   h2 {
     word-break: normal;
@@ -120,6 +115,7 @@ a {
   }
 }
 
+/* Small screen final polish */
 @media (max-width: 640px) {
   .container-main {
     width: min(100% - 24px, 1180px);
@@ -131,9 +127,32 @@ a {
       var(--background);
   }
 
+  h1 {
+    max-width: 100%;
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  h2 {
+    max-width: 100%;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
   .outline-text {
-    -webkit-text-stroke: 1.1px #111111;
-    text-stroke: 1.1px #111111;
+    -webkit-text-stroke: 1px #111111;
+    text-stroke: 1px #111111;
   }
 
   [data-mobile-animate="true"] {
@@ -141,7 +160,7 @@ a {
   }
 }
 
-/* Accessibility: only reduce animations when user enabled Reduce Motion */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -154,21 +173,5 @@ a {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
-  }
-}
-
-/* Final mobile text visibility fix */
-@media (max-width: 640px) {
-
-  h1,
-  h2 {
-    max-width: 100%;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .container-main {
-    width: min(100% - 24px, 1180px);
   }
 }
