@@ -63,7 +63,6 @@ a {
 .outline-text {
   color: transparent;
   -webkit-text-stroke: 2px #111111;
-  text-stroke: 2px #111111;
 }
 
 .container-main {
@@ -154,7 +153,6 @@ a {
 
   .outline-text {
     -webkit-text-stroke: 1px #111111;
-    text-stroke: 1px #111111;
   }
 
   [data-mobile-animate="true"] {
