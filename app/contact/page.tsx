@@ -19,7 +19,7 @@ export default function ContactPage() {
               /Contact
             </p>
 
-            <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-8xl md:leading-none md:tracking-[-0.06em]">
+            <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
               Let&apos;s build something great
             </h1>
 
