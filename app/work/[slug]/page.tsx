@@ -55,6 +55,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound();
   }
+  const galleryImages = project.gallery ?? [project.image];
+  const processItems = project.process ?? [];
+  const resultItems = project.results ?? [];
 
   return (
     <main className="pt-32">
@@ -82,7 +85,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.category}
             </p>
 
-            <h1 className="max-w-4xl text-[clamp(2.55rem,10vw,5rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,8vw,6rem)] md:tracking-[-0.06em]">
+            <h1 className="max-w-4xl text-[clamp(2.2rem,8.5vw,4.2rem)] font-black uppercase leading-[1] tracking-[-0.035em] sm:text-[clamp(2.8rem,7vw,5rem)] md:tracking-[-0.055em]">
               {project.title}
             </h1>
 
@@ -140,18 +143,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Reveal>
         </div>
 
-        <Reveal delay={0.15}>
-          <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-2.5 shadow-xl">
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={1200}
-              height={760}
-              priority
-              className="aspect-[16/9] w-full rounded-[1.25rem] object-cover"
-            />
-          </div>
-        </Reveal>
+        
       </section>
 
       <section className="container-main py-12 md:py-20">
@@ -219,7 +211,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </Reveal>
 
           <div className="space-y-8">
-            {project.gallery.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <Reveal key={image} delay={index * 0.08}>
                 <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-2.5 shadow-xl">
                   <Image
@@ -236,7 +228,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <ProjectProcess process={project.process} results={project.results} />
+      <ProjectProcess process={processItems} results={resultItems} />
       <RelatedProjects currentSlug={project.slug} />
       <ContactCTA />
     </main>

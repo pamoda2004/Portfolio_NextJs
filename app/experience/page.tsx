@@ -64,11 +64,10 @@ export default function ExperiencePage() {
           <Reveal delay={0.1}>
             <div className="rounded-[1.6rem] border border-black/10 bg-white/60 p-5 md:rounded-[2rem] md:p-6">
               <h3 className="text-2xl font-black leading-tight tracking-[-0.035em] md:text-3xl">
-                Design
+                AI/ML
               </h3>
               <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base md:leading-7">
-                Minimal layouts, typography systems, clean spacing, and modern
-                portfolio interfaces.
+                Machine learning models, data preprocessing, prediction systems, and AI-powered web applications.
               </p>
             </div>
           </Reveal>
@@ -79,8 +78,7 @@ export default function ExperiencePage() {
                 Projects
               </h3>
               <p className="mt-3 text-sm leading-6 text-neutral-600 md:text-base md:leading-7">
-                Portfolio websites, e-commerce systems, dashboards, and
-                AI-assisted web applications.
+                Portfolio websites, e-commerce systems, dashboards, and AI-assisted web applications.
               </p>
             </div>
           </Reveal>

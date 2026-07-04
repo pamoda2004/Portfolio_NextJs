@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 import Reveal from "./Reveal";
 import SectionParallaxWord from "./SectionParallaxWord";
 
-const filters = ["All", "Web Design", "Portfolio", "Landing Page", "Dashboard"];
+const filters = ["All", "Dashboard", "Computer Vision", "UI/UX", "Portfolio"];
 
 export default function SelectedWork() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -19,29 +19,25 @@ export default function SelectedWork() {
     return projects.filter((project) => project.category === activeFilter);
   }, [activeFilter]);
 
+  const visibleProjects = filteredProjects.slice(0, 4);
+
   return (
-    <section id="work" className="relative overflow-hidden py-24">
+    <section id="work" className="relative overflow-hidden py-10 md:py-24">
       <SectionParallaxWord text="Portfolio" />
 
       <div className="container-main relative">
         <Reveal>
           <div className="mb-8 flex flex-col justify-between gap-6 md:mb-12 md:flex-row md:items-end">
             <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]">
                 /Selected Work
               </p>
 
-              <h2 className="text-5xl font-black tracking-[-0.05em] md:text-6xl">
+              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black leading-none tracking-[-0.05em] md:text-6xl">
                 Recent Projects
               </h2>
             </div>
 
-            <Link
-              href="/work"
-              className="w-fit rounded-full border border-black/10 px-5 py-3 text-sm font-semibold transition hover:bg-black hover:text-white"
-            >
-              View All Work
-            </Link>
           </div>
         </Reveal>
 
@@ -67,34 +63,44 @@ export default function SelectedWork() {
           </div>
         </Reveal>
 
-        <motion.div
-          layout
-          className="grid gap-5 md:grid-cols-2"
-        >
-          {filteredProjects.map((project, index) => (
-            <motion.div
-              layout
-              key={project.slug}
-              initial={{ opacity: 0, y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 28 }}
-              transition={{
-                duration: 0.45,
-                delay: index * 0.05,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {filteredProjects.length === 0 && (
+        {filteredProjects.length === 0 ? (
           <div className="rounded-[2rem] border border-black/10 bg-white/60 p-10 text-center">
             <p className="text-lg font-semibold text-neutral-600">
               No projects found for this category.
             </p>
           </div>
+        ) : (
+          <motion.div layout className="grid gap-5 md:grid-cols-2">
+            {visibleProjects.map((project, index) => (
+              <motion.div
+                layout
+                key={project.slug}
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 28 }}
+                transition={{
+                  duration: 0.45,
+                  delay: index * 0.05,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+
+        {filteredProjects.length > 4 && (
+          <Reveal delay={0.12}>
+            <div className="mt-10 flex justify-center">
+              <Link
+                href="/work"
+                className="inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-sm font-bold text-white shadow-[0_16px_40px_rgba(0,0,0,0.18)] transition hover:scale-105 active:scale-95"
+              >
+                View All Projects
+              </Link>
+            </div>
+          </Reveal>
         )}
       </div>
     </section>

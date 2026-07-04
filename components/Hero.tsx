@@ -8,12 +8,12 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pb-8 pt-32 md:min-h-screen md:pb-10">
       <div className="container-main">
-        <div className="max-w-6xl">
+        <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -18 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]"
+            className="mb-5 text-center text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 sm:text-sm sm:tracking-[0.3em]"
           >
             {profile.role}
           </motion.p>
@@ -29,7 +29,7 @@ export default function Hero() {
                 },
               },
             }}
-            className="max-w-full leading-[0.95] tracking-[-0.035em] sm:leading-[0.9] md:tracking-[-0.05em]"
+            className="mx-auto max-w-[1120px] text-center leading-[0.95] tracking-[-0.035em] sm:leading-[0.9] md:tracking-[-0.05em]"
           >
             <motion.span
               variants={{
@@ -37,7 +37,7 @@ export default function Hero() {
                 show: { opacity: 1, y: 0, filter: "blur(0px)" },
               }}
               transition={{ duration: 0.8 }}
-              className="outline-text block text-[clamp(2.45rem,12vw,6.4rem)] font-black uppercase tracking-[-0.03em] sm:text-[clamp(3.4rem,11vw,8.8rem)] md:tracking-[-0.06em]"
+              className="outline-text block text-[clamp(2.35rem,11vw,6rem)] font-black uppercase tracking-[-0.03em] sm:text-[clamp(3.3rem,10vw,8.2rem)] md:tracking-[-0.06em]"
             >
               {profile.firstName}
             </motion.span>
@@ -48,7 +48,7 @@ export default function Hero() {
                 show: { opacity: 1, y: 0, filter: "blur(0px)" },
               }}
               transition={{ duration: 0.8 }}
-              className="block text-[clamp(2.45rem,12vw,6.4rem)] font-black uppercase tracking-[-0.035em] text-black sm:text-[clamp(3.4rem,11vw,8.8rem)] md:tracking-[-0.065em]"
+              className="block text-[clamp(2.35rem,11vw,6rem)] font-black uppercase tracking-[-0.035em] text-black sm:text-[clamp(3.3rem,10vw,8.2rem)] md:tracking-[-0.065em]"
             >
               {profile.lastName}
             </motion.span>
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7 }}
-            className="mt-6 max-w-2xl text-[0.95rem] leading-7 text-neutral-600 sm:text-base md:mt-8 md:text-lg md:leading-8"
+            className="mx-auto mt-6 max-w-2xl text-center text-[0.95rem] leading-7 text-neutral-600 sm:text-base md:mt-8 md:text-lg md:leading-8"
           >
             {profile.bio}
           </motion.p>
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65, duration: 0.7 }}
-            className="mt-7 flex flex-wrap gap-3 md:mt-8"
+            className="mt-7 flex flex-wrap justify-center gap-3 md:mt-8"
           >
             <a
               href="/cv/Pamoda-Jayathilaka-CV.pdf"
@@ -97,7 +97,7 @@ export default function Hero() {
               },
             },
           }}
-          className="mt-8 flex flex-nowrap items-center gap-5 overflow-x-auto border-t border-black/10 pt-4 scrollbar-hide sm:gap-4 md:mt-12 md:pt-6"
+          className="mx-auto mt-8 flex max-w-3xl flex-nowrap items-center justify-center gap-5 overflow-x-auto border-t border-black/10 pt-4 scrollbar-hide sm:gap-6 md:mt-12 md:pt-6"
         >
           {socialLinks.map((link) => (
             <motion.a

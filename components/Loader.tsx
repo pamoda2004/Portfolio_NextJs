@@ -22,7 +22,7 @@ export default function Loader() {
 
     const timer = setTimeout(() => {
       setShowLoader(false);
-    }, 1700);
+    }, 2200);
 
     return () => clearTimeout(timer);
   }, []);
