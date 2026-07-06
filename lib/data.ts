@@ -33,7 +33,7 @@ export const projects = [
       "Vite",
       "NumPy"
     ],
-    liveUrl: "#",
+    liveUrl: "https://github.com/pamoda2004/identity--tracker-system",
     overview:
       "This project focuses on maintaining persistent identities for people detected in video streams. The system combines object detection, appearance feature extraction, movement analysis, and similarity matching to assign consistent identities while managing unknown individuals through a user-assisted labeling workflow.",
 
@@ -67,7 +67,7 @@ export const projects = [
       "Scalable codebase with separate frontend and backend components."
     ],
 
-    gallery: ["/images/project-1.jpg", "/images/project-2.jpg"],
+    gallery: ["/images/yolo_1.png", "/images/yolo_3.png"],
   },
   {
     slug: "portfolio-website",
@@ -79,7 +79,7 @@ export const projects = [
     role: "UI Developer",
     timeline: "2026",
     tools: ["Next.js", "Framer Motion", "Lenis"],
-    liveUrl: "#",
+    liveUrl: "https://pamodaravi.vercel.app/",
     overview:
       "A modern portfolio website focused on bold typography, smooth animation, and clean project presentation.",
     problem:
@@ -107,7 +107,7 @@ export const projects = [
     image: "/images/veh.jpg",
     description:
       "An AI-powered vehicle recommendation system that predicts fair vehicle prices and recommends the best vehicles based on user preferences.",
-    role: "Machine Learning & Full Stack Developer",
+    role: "Machine Learning Developer",
     timeline: "2026",
     tools: [
       "Python",
@@ -147,7 +147,7 @@ export const projects = [
       "Built a responsive and user-friendly interface for desktop and mobile devices.",
       "Successfully integrated Machine Learning with a FastAPI backend and modern web frontend."
     ],
-    gallery: ["/images/project-3.jpg", "/images/project-4.jpg"],
+    gallery: ["/images/vehicle_1.png", "/images/vehicle_2.png"],
   },
   {
     slug: "smart-event-planner",
@@ -167,7 +167,7 @@ export const projects = [
       "CSS3",
       "Vite"
     ],
-    liveUrl: "#",
+    liveUrl: "https://github.com/pamoda2004/smart-event-planner",
 
     overview:
       "This project provides an intelligent event planning experience by allowing users to describe an event in natural language and automatically generating structured event details such as category, guest count, budget, and event vibe.",
@@ -192,7 +192,7 @@ export const projects = [
       "Reusable and maintainable component-based architecture.",
     ],
 
-    gallery: ["/images/project-4.jpg", "/images/project-1.jpg"],
+    gallery: ["/images/plan_1.png", "/images/smart_2.png"],
   },
   {
     slug: "travel-guide-website",
@@ -253,7 +253,7 @@ export const projects = [
       "Fast weather prediction through API integration.",
       "Improved the travel planning experience by combining travel information and weather prediction in one platform."
     ],
-    gallery: ["/images/project-4.jpg", "/images/project-1.jpg"],
+    gallery: ["/images/travel_1.png", "/images/travel_2.png"],
   }
 ];
 
