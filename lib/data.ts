@@ -8,10 +8,10 @@ export const profile = {
 };
 
 export const socialLinks = [
-  { label: "LinkedIn", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Behance", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/pamoda-jayathilaka-ba4b5339a/" },
+  { label: "GitHub", href: "https://github.com/pamoda2004" },
+  { label: "Instagram", href: "https://www.instagram.com/pamoda__r?igsh=MW9oNjZvbGJuaW1rMQ%3D%3D&utm_source=qr" },
+  { label: "Facebook", href: "https://www.facebook.com/share/1DMvUjkdTD/?mibextid=wwXIfr" },
 ];
 
 export const projects = [
@@ -70,41 +70,71 @@ export const projects = [
     gallery: ["/images/yolo_1.png", "/images/yolo_3.png"],
   },
   {
-    slug: "portfolio-website",
-    title: "Designer Portfolio",
-    category: "Portfolio",
-    image: "/images/project-2.jpg",
+    slug: "travel-guide-website",
+
+    title: "Travel Guide Website with Weather Prediction",
+
+    category: "UI/UX",
+
+    image: "/images/UI.jpg",
+
     description:
-      "A minimal black-and-white portfolio with smooth animations and project pages.",
-    role: "UI Developer",
+      "A responsive travel guide website consisting of six user interface pages designed with HTML, CSS, and JavaScript. The website includes an integrated machine learning weather prediction feature that helps users view predicted weather conditions before planning their trip.",
+
+    role: "UI/Frontend Developer & Machine Learning Developer",
+
     timeline: "2026",
-    tools: ["Next.js", "Framer Motion", "Lenis"],
-    liveUrl: "https://pamodaravi.vercel.app/",
+
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+      "Scikit-learn",
+      "FastAPI",
+      "Pandas",
+      "Joblib"
+    ],
+
+    liveUrl: "https://my-travel-website-xooa.vercel.app/",
+
     overview:
-      "A modern portfolio website focused on bold typography, smooth animation, and clean project presentation.",
+      "The Travel Guide Website was developed to provide users with a simple and responsive travel planning experience. The project includes six interconnected web pages covering travel information, destinations, and trip planning. One page integrates a machine learning weather prediction model that allows users to select a city and travel month to predict the expected weather condition, temperature, and wind speed.",
+
     problem:
-      "The challenge was to create a portfolio that feels premium while staying lightweight, responsive, and easy to maintain.",
+      "Travelers often need to switch between multiple websites to find destination information and weather forecasts before planning a trip. This makes travel planning less convenient and time-consuming.",
+
     solution:
-      "I used a monochrome visual system, smooth reveal animations, project filtering, page transitions, and reusable data-driven components.",
+      "I designed and developed a six-page responsive travel guide website using HTML, CSS, and JavaScript. To improve the user experience, I integrated a machine learning weather prediction system through a FastAPI backend. Users can enter a city and travel month to receive predicted weather conditions, temperature, and wind speed within the same website.",
+
     process: [
-      "Created the visual direction with oversized typography.",
-      "Built reusable components for projects, services, and CTA sections.",
-      "Added loader, page transition, smooth scroll, and custom cursor.",
-      "Optimized mobile layouts and reduced horizontal overflow issues.",
+      "Designed the user interface for six responsive travel-related web pages.",
+      "Developed the frontend using HTML, CSS, and JavaScript.",
+      "Created navigation between all pages for a smooth user experience.",
+      "Collected and preprocessed historical weather data for machine learning.",
+      "Built Random Forest classification and regression models using Scikit-learn.",
+      "Evaluated and optimized the prediction models.",
+      "Saved trained models using Joblib.",
+      "Developed REST APIs with FastAPI to serve weather predictions.",
+      "Integrated the machine learning backend into the travel website.",
+      "Tested the complete system for responsiveness and functionality."
     ],
+
     results: [
-      "Premium black-and-white portfolio style.",
-      "Smooth route and scroll animations.",
-      "Data-driven project pages.",
-      "Responsive and deployment-ready structure.",
+      "Designed and developed six responsive travel guide web pages.",
+      "Successfully integrated a machine learning weather prediction feature.",
+      "Users can predict weather conditions, temperature, and wind speed using only city and month inputs.",
+      "Responsive layout compatible with desktop, tablet, and mobile devices.",
+      "Fast weather prediction through API integration.",
+      "Improved the travel planning experience by combining travel information and weather prediction in one platform."
     ],
-    gallery: ["/images/project-2.jpg", "/images/project-3.jpg"],
+    gallery: ["/images/travel_1.png", "/images/travel_2.png"],
   },
   {
     slug: "vehicle-recommendation-system",
     title: "AI Vehicle Recommendation Web Application",
     category: "Dashboard",
-    image: "/images/veh.jpg",
+    image: "/images/vere.jpg",
     description:
       "An AI-powered vehicle recommendation system that predicts fair vehicle prices and recommends the best vehicles based on user preferences.",
     role: "Machine Learning Developer",
@@ -195,65 +225,35 @@ export const projects = [
     gallery: ["/images/plan_1.png", "/images/smart_2.png"],
   },
   {
-    slug: "travel-guide-website",
-
-    title: "Travel Guide Website with Weather Prediction",
-
-    category: "UI/UX",
-
-    image: "/images/project-travel.jpg",
-
+    slug: "portfolio-website",
+    title: "Designer Portfolio",
+    category: "Portfolio",
+    image: "/images/port.jpg",
     description:
-      "A responsive travel guide website consisting of six user interface pages designed with HTML, CSS, and JavaScript. The website includes an integrated machine learning weather prediction feature that helps users view predicted weather conditions before planning their trip.",
-
-    role: "UI/Frontend Developer & Machine Learning Developer",
-
+      "A minimal black-and-white portfolio with smooth animations and project pages.",
+    role: "UI Developer",
     timeline: "2026",
-
-    tools: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Python",
-      "Scikit-learn",
-      "FastAPI",
-      "Pandas",
-      "Joblib"
-    ],
-
-    liveUrl: "https://my-travel-website-xooa.vercel.app/",
-
+    tools: ["Next.js", "Framer Motion", "Lenis"],
+    liveUrl: "https://pamodaravi.vercel.app/",
     overview:
-      "The Travel Guide Website was developed to provide users with a simple and responsive travel planning experience. The project includes six interconnected web pages covering travel information, destinations, and trip planning. One page integrates a machine learning weather prediction model that allows users to select a city and travel month to predict the expected weather condition, temperature, and wind speed.",
-
+      "A modern portfolio website focused on bold typography, smooth animation, and clean project presentation.",
     problem:
-      "Travelers often need to switch between multiple websites to find destination information and weather forecasts before planning a trip. This makes travel planning less convenient and time-consuming.",
-
+      "The challenge was to create a portfolio that feels premium while staying lightweight, responsive, and easy to maintain.",
     solution:
-      "I designed and developed a six-page responsive travel guide website using HTML, CSS, and JavaScript. To improve the user experience, I integrated a machine learning weather prediction system through a FastAPI backend. Users can enter a city and travel month to receive predicted weather conditions, temperature, and wind speed within the same website.",
-
+      "I used a monochrome visual system, smooth reveal animations, project filtering, page transitions, and reusable data-driven components.",
     process: [
-      "Designed the user interface for six responsive travel-related web pages.",
-      "Developed the frontend using HTML, CSS, and JavaScript.",
-      "Created navigation between all pages for a smooth user experience.",
-      "Collected and preprocessed historical weather data for machine learning.",
-      "Built Random Forest classification and regression models using Scikit-learn.",
-      "Evaluated and optimized the prediction models.",
-      "Saved trained models using Joblib.",
-      "Developed REST APIs with FastAPI to serve weather predictions.",
-      "Integrated the machine learning backend into the travel website.",
-      "Tested the complete system for responsiveness and functionality."
+      "Created the visual direction with oversized typography.",
+      "Built reusable components for projects, services, and CTA sections.",
+      "Added loader, page transition, smooth scroll, and custom cursor.",
+      "Optimized mobile layouts and reduced horizontal overflow issues.",
     ],
-
     results: [
-      "Designed and developed six responsive travel guide web pages.",
-      "Successfully integrated a machine learning weather prediction feature.",
-      "Users can predict weather conditions, temperature, and wind speed using only city and month inputs.",
-      "Responsive layout compatible with desktop, tablet, and mobile devices.",
-      "Fast weather prediction through API integration.",
-      "Improved the travel planning experience by combining travel information and weather prediction in one platform."
+      "Premium black-and-white portfolio style.",
+      "Smooth route and scroll animations.",
+      "Data-driven project pages.",
+      "Responsive and deployment-ready structure.",
     ],
-    gallery: ["/images/travel_1.png", "/images/travel_2.png"],
+    gallery: ["/images/project-2.jpg", "/images/project-3.jpg"],
   }
 ];
 
@@ -261,26 +261,26 @@ export const services = [
   {
     title: "Frontend Development",
     description:
-      "Responsive and modern web applications built with React, Next.js, TypeScript, Tailwind CSS, and smooth UI interactions.",
-    image: "/images/service-web.jpg",
+      "I build clean, responsive, and modern web interfaces using React, Next.js, TypeScript, and Tailwind CSS. My work focuses on smooth user experience, mobile-friendly layouts, strong visual hierarchy, and professional UI interactions.",
+    image: "/images/front.jpg",
   },
   {
     title: "AI/ML Development",
     description:
-      "Machine learning models, prediction systems, recommendation features, and data-driven solutions using Python and ML tools.",
-    image: "/images/service-ai.jpg",
+      "I develop AI and machine learning features for real-world applications such as weather prediction, vehicle recommendation, event planning assistance, and crop stress detection using Python and ML tools.",
+    image: "/images/ml.jpg",
   },
   {
-    title: "Full-Stack AI Apps",
+    title: "Full-Stack Development",
     description:
-      "AI-powered web applications with frontend interfaces, backend APIs, database integration, and intelligent automation features.",
-    image: "/images/service-fullstack.jpg",
+      "I build complete web applications with responsive frontend interfaces, backend APIs, database integration, authentication, admin dashboards, and deployment-ready architecture using modern web technologies.",
+    image: "/images/fullstack.jpg",
   },
   {
     title: "Data & Prediction Systems",
     description:
-      "Smart systems for weather prediction, vehicle recommendation, crop stress detection, and real-world decision support.",
-    image: "/images/service-data.jpg",
+      "I design data-driven systems that analyze inputs and provide meaningful predictions, recommendations, and decision-support results for real-world problems.",
+    image: "/images/data.jpg",
   },
 ];
 

@@ -33,8 +33,8 @@ export default function SelectedWork() {
                 /Selected Work
               </p>
 
-              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black leading-none tracking-[-0.05em] md:text-6xl">
-                Recent Projects
+              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.05em] md:text-6xl">
+                Featured Work
               </h2>
             </div>
 

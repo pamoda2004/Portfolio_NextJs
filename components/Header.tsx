@@ -122,14 +122,7 @@ export default function Header() {
               <div className="rounded-[1.35rem] border border-black/10 bg-white/75 p-3">
                 <div className="mb-3 flex items-center justify-between border-b border-black/10 px-2 pb-3">
                   <div className="flex items-center gap-3">
-                    <Image
-                      src="/images/Pro.jpeg"
-                      alt="Pamoda Jayathilaka"
-                      width={46}
-                      height={46}
-                      className="h-11 w-11 rounded-full border border-black/10 object-cover object-center shadow-sm"
-                    />
-
+                  
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
                         Menu

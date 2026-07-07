@@ -27,7 +27,7 @@ export default function ContactCTA() {
               Available for New Project
             </div>
 
-            <h2 className="mx-auto max-w-4xl text-5xl font-black uppercase leading-none tracking-[-0.06em] md:text-6xl">
+            <h2 className="text-6xl font-black uppercase tracking-[-0.05em] md:text-6xl">
               Have a project in mind?
             </h2>
 
