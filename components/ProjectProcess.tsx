@@ -17,7 +17,7 @@ export default function ProjectProcess({
             /Process
           </p>
 
-          <h2 className="text-5xl font-black tracking-[-0.05em] md:text-5xl">
+          <h2 className="text-5xl font-black tracking-[-0.03em] md:text-5xl">
             Design Process
           </h2>
 
@@ -41,7 +41,7 @@ export default function ProjectProcess({
             /Result
           </p>
 
-          <h2 className="text-5xl font-black tracking-[-0.05em] md:text-5xl">
+          <h2 className="text-5xl font-black tracking-[-0.03em] md:text-5xl">
             Final Result
           </h2>
 

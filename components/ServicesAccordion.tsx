@@ -37,7 +37,7 @@ export default function ServicesAccordion() {
             /Service
           </p>
 
-          <h2 className="mb-8 text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.05em] md:mb-10 md:text-6xl">
+          <h2 className="mb-8 text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.03em] md:mb-10 md:text-6xl">
             What I Do
           </h2>
         </Reveal>
@@ -69,8 +69,8 @@ export default function ServicesAccordion() {
                   <span
                     className={
                       isOpen
-                        ? "text-[clamp(1.25rem,3.4vw,2.35rem)] font-light uppercase leading-none tracking-[-0.04em] text-black"
-                        : "text-[clamp(1.35rem,3.8vw,2.45rem)] font-light uppercase leading-none tracking-[-0.04em] text-black transition group-hover:translate-x-2"
+                        ? "text-[clamp(1.05rem,3.2vw,2.15rem)] font-normal uppercase leading-none tracking-[-0.03em] text-black"
+                        : "text-[clamp(1.15rem,3.6vw,2.25rem)] font-normal uppercase leading-none tracking-[-0.03em] text-black transition group-hover:translate-x-2"
                     }
                   >
                     {service.title}
@@ -159,7 +159,7 @@ export default function ServicesAccordion() {
                             initial={{ opacity: 0, y: 18, filter: "blur(8px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.45, delay: 0.22 }}
-                            className="text-[clamp(1.45rem,4.2vw,2.65rem)] font-light uppercase leading-none tracking-[-0.04em] text-white"
+                            className="text-[clamp(1.25rem,4vw,2.45rem)] font-light uppercase leading-none tracking-[-0.01em] text-white"
                           >
                             {service.title}
                           </motion.h3>

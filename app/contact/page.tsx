@@ -19,13 +19,12 @@ export default function ContactPage() {
               /Contact
             </p>
 
-            <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
+            <h1 className="max-w-5xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.03em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
               Let&apos;s build something great
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600 md:mt-6 md:text-lg md:leading-8">
-              Have a portfolio, website, dashboard, or modern web project in
-              mind? Send me a message and let&apos;s discuss the idea.
+              Have a modern website, AI solution, or full-stack project in mind? Send me a message and let&apos;s discuss the idea.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10 md:gap-4">

@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 import Reveal from "./Reveal";
 import SectionParallaxWord from "./SectionParallaxWord";
 
-const filters = ["All", "Dashboard", "Computer Vision", "UI/UX", "Portfolio"];
+const filters = ["All", "Dashboard", "Computer Vision", "Web Design", "Portfolio"];
 
 export default function SelectedWork() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -33,7 +33,7 @@ export default function SelectedWork() {
                 /Selected Work
               </p>
 
-              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.05em] md:text-6xl">
+              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.03em] md:text-6xl">
                 Featured Work
               </h2>
             </div>

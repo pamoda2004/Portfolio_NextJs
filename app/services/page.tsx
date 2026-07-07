@@ -18,13 +18,12 @@ export default function ServicesPage() {
             /Services
           </p>
 
-          <h1 className="max-w-4xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
+          <h1 className="max-w-4xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.03em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
             Design and development services
           </h1>
 
           <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600 md:mt-6 md:text-lg md:leading-8">
-            I create clean, responsive, and modern digital experiences with a
-            focus on strong layout, smooth interaction, and user-friendly design.
+            I build clean, responsive, and intelligent digital experiences by combining modern frontend development with AI, machine learning, and data-driven solutions.
           </p>
         </Reveal>
 

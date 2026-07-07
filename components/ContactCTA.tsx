@@ -27,7 +27,7 @@ export default function ContactCTA() {
               Available for New Project
             </div>
 
-            <h2 className="text-6xl font-black uppercase tracking-[-0.05em] md:text-6xl">
+            <h2 className="text-6xl font-black uppercase tracking-[-0.03em] md:text-6xl">
               Have a project in mind?
             </h2>
 

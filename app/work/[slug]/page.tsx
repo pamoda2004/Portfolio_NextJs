@@ -85,7 +85,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {project.category}
             </p>
 
-            <h1 className="max-w-4xl text-[clamp(2.2rem,8.5vw,4.2rem)] font-black uppercase leading-[1] tracking-[-0.035em] sm:text-[clamp(2.8rem,7vw,5rem)] md:tracking-[-0.055em]">
+            <h1 className="max-w-2xl text-[clamp(2.2rem,8.5vw,4.2rem)] font-black uppercase leading-[1] tracking-[-0.02em] sm:text-[clamp(2.8rem,7vw,5rem)] md:tracking-[-0.055em]">
               {project.title}
             </h1>
 
@@ -205,7 +205,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               /Screens
             </p>
 
-            <h2 className="mb-8 text-[clamp(2.25rem,9vw,3.5rem)] font-black leading-[1] tracking-[-0.04em] md:mb-10 md:text-5xl md:tracking-[-0.05em]">
+            <h2 className="mb-8 text-[clamp(2.25rem,9vw,3.5rem)] font-black uppercase leading-[1] tracking-[-0.03em] md:mb-10 md:text-5xl md:tracking-[-0.05em]">
               Project Screens
             </h2>
           </Reveal>
@@ -213,7 +213,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="space-y-8">
             {galleryImages.map((image, index) => (
               <Reveal key={image} delay={index * 0.08}>
-                <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-2.5 shadow-xl">
+                <div className="mx-auto max-w-5xl overflow-hidden rounded-[1.6rem] border border-black/10 bg-white/60 p-1.8 shadow-xl">
                   <Image
                     src={image}
                     alt={`${project.title} screen ${index + 1}`}

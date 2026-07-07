@@ -16,13 +16,12 @@ export default function ExperiencePage() {
             /Experience
           </p>
 
-          <h1 className="max-w-4xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.04em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
+          <h1 className="max-w-4xl text-[clamp(2.55rem,11vw,4.8rem)] font-black uppercase leading-[0.98] tracking-[-0.03em] sm:text-[clamp(3.2rem,9vw,6rem)] md:text-7xl md:leading-none md:tracking-[-0.06em]">
             Learning by building real projects
           </h1>
 
           <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-600 md:mt-6 md:text-lg md:leading-8">
-            My journey is focused on web development, UI design, academic
-            projects, and continuous practice with modern frontend tools.
+            My journey combines modern web development, AI/ML solutions, full-stack applications, and real-world academic projects built with practical technologies.
           </p>
         </Reveal>
       </section>

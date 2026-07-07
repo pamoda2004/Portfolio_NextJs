@@ -20,8 +20,8 @@ export default function RelatedProjects({ currentSlug }: RelatedProjectsProps) {
               /More Work
             </p>
 
-            <h2 className="text-5xl font-black tracking-[-0.05em] md:text-5xl">
-              Related Projects
+            <h2 className="text-5xl font-black uppercase tracking-[-0.03em] md:text-5xl">
+              Related Work
             </h2>
           </div>
         </div>

@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   },
   description:
     "Modern portfolio of Pamoda Jayathilaka, a frontend developer creating clean and responsive web experiences.",
+  icons: {
+    icon: "/icons/favicon.jpg",
+    shortcut: "/icons/favicon.jpg",
+    apple: "/icons/favicon.jpg",
+  },
   keywords: [
     "Pamoda Jayathilaka",
     "Frontend Developer",

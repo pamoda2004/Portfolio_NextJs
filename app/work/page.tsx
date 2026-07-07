@@ -15,7 +15,7 @@ export default function WorkPage() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-neutral-500">
             /All Work
           </p>
-          <h1 className="mb-12 text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.05em] md:mb-10 md:text-6xl">
+          <h1 className="mb-12 text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.03em] md:mb-10 md:text-6xl">
             Selected Work
           </h1>
         </Reveal>
