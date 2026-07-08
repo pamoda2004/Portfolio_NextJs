@@ -43,7 +43,7 @@ export default function Header() {
         <div className="flex items-center gap-2 rounded-full bg-white/80 py-1.5 pl-1.5 pr-3 text-sm font-semibold shadow-sm ring-1 ring-black/5 sm:gap-3 sm:pr-4">
           <span className="relative grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border border-black/10 bg-white shadow-sm sm:h-11 sm:w-11">
             <Image
-              src="/images/My.png"
+              src="/images/logo.jpg"
               alt="Pamoda Jayathilaka"
               width={56}
               height={56}
@@ -58,7 +58,7 @@ export default function Header() {
             </span>
 
             <span className="flex items-center gap-1.5 text-xs font-semibold text-neutral-600">
-              <span className="h-2 w-2 rounded-full bg-green-500" />
+              <span className="available-dot h-2 w-2 rounded-full bg-green-500" />
               Available
             </span>
           </span>
@@ -122,7 +122,7 @@ export default function Header() {
               <div className="rounded-[1.35rem] border border-black/10 bg-white/75 p-3">
                 <div className="mb-3 flex items-center justify-between border-b border-black/10 px-2 pb-3">
                   <div className="flex items-center gap-3">
-                  
+
                     <div>
                       <p className="text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">
                         Menu

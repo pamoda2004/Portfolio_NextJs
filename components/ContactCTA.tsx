@@ -23,7 +23,7 @@ export default function ContactCTA() {
               <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-black/15 via-transparent to-white/20 opacity-0 transition duration-500 group-hover:opacity-100" />
             </div>
             <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-sm font-semibold">
-              <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+              <span className="available-dot h-2.5 w-2.5 rounded-full bg-green-500" />
               Available for New Project
             </div>
 
@@ -32,7 +32,7 @@ export default function ContactCTA() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-neutral-500">
-              Let&apos;s build a clean, fast, and modern website together.
+              Let&apos;s turn your idea into a clean, modern, and intelligent digital solution.
             </p>
 
             <div className="mt-8 flex justify-center">

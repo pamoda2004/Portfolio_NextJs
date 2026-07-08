@@ -33,7 +33,7 @@ export const projects = [
       "Vite",
       "NumPy"
     ],
-    liveUrl: "https://github.com/pamoda2004/identity--tracker-system",
+    liveUrl: "https://github.com/pamoda2004/persistent-identity-tracker",
     overview:
       "This project focuses on maintaining persistent identities for people detected in video streams. The system combines object detection, appearance feature extraction, movement analysis, and similarity matching to assign consistent identities while managing unknown individuals through a user-assisted labeling workflow.",
 
@@ -212,7 +212,7 @@ export const projects = [
       "CSS",
       "JavaScript"
     ],
-    liveUrl: "https://vehicle-mlmodel.vercel.app/",
+    liveUrl: "https://github.com/pamoda2004/Vehicle_Assistant",
 
     overview:
       "This project focuses on helping users make informed vehicle purchasing decisions by combining machine learning with a responsive web application. Users can search vehicles using filters such as price range, fuel type, transmission, and manufacturing year, while the system predicts fair market prices and recommends the best matching vehicles.",

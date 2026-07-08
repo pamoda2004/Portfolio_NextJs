@@ -14,7 +14,7 @@ export default function Experience() {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-white/50">
                 /Experience
               </p>
-              <h2 className="text-5xl font-black uppercase leading-none tracking-[-0.03em] md:text-5xl">
+              <h2 className="text-[clamp(2.5rem,9vw,4.5rem)] font-black uppercase leading-none tracking-[-0.03em] md:text-5xl">
                 Work Journey
               </h2>
             </div>
@@ -35,7 +35,7 @@ export default function Experience() {
                   {item.date}
                 </p>
 
-                <h3 className="text-2xl font-bold transition group-hover:translate-x-1 group-active:translate-x-1">
+                <h3 className="text-2xl font-black transition group-hover:translate-x-1 group-active:translate-x-1">
                   {item.company}
                 </h3>
 
