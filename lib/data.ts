@@ -1,7 +1,7 @@
 export const profile = {
   firstName: "Pamoda",
   lastName: "Jayathilaka",
-  role: "Frontend Developer",
+  role: "Frontend Developer | AI/ML Developer | Full-Stack Developer",
   bio: "I build responsive web experiences and AI-powered applications using modern frontend tools, machine learning, and data-driven solutions.",
   email: "jayathilakapamoda9@gmail.com",
   website: "https://nextjsportfolio-gray.vercel.app",
