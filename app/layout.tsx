@@ -6,6 +6,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Loader from "@/components/Loader";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -68,14 +69,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={geist.variable}>
-        <SmoothScroll />
-        <Loader />
-        <PageTransition />
-        <CustomCursor />
-        <Header />
-        {children}
+        <ThemeProvider>
+          <SmoothScroll />
+          <Loader />
+          <PageTransition />
+          <CustomCursor />
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

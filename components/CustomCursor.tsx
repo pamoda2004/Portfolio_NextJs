@@ -40,26 +40,30 @@ export default function CustomCursor() {
       mouseY.set(event.clientY - 10);
     }
 
-    function handleMouseOver(event: MouseEvent) {
-      const target = event.target as HTMLElement;
+    function isHoverTarget(target: EventTarget | null) {
+      if (!(target instanceof HTMLElement)) return false;
 
-      if (
+      return Boolean(
         target.closest("a") ||
         target.closest("button") ||
         target.closest("[data-cursor='hover']")
-      ) {
+      );
+    }
+
+    function handleMouseOver(event: MouseEvent) {
+      if (isHoverTarget(event.target)) {
         setHovering(true);
       }
     }
 
     function handleMouseOut(event: MouseEvent) {
       const target = event.target as HTMLElement;
+      const nextTarget = event.relatedTarget as HTMLElement | null;
 
-      if (
-        target.closest("a") ||
-        target.closest("button") ||
-        target.closest("[data-cursor='hover']")
-      ) {
+      const leavingHoverElement =
+        isHoverTarget(target) && !isHoverTarget(nextTarget);
+
+      if (leavingHoverElement) {
         setHovering(false);
       }
     }
@@ -86,12 +90,15 @@ export default function CustomCursor() {
         y: springY,
       }}
       animate={{
-        width: hovering ? 52 : 20,
-        height: hovering ? 52 : 20,
-        opacity: hovering ? 0.85 : 0.6,
+        width: hovering ? 54 : 20,
+        height: hovering ? 54 : 20,
+        opacity: hovering ? 0.95 : 0.75,
       }}
-      transition={{ duration: 0.2 }}
-      className="pointer-events-none fixed left-0 top-0 z-[10000] hidden rounded-full border border-white bg-black mix-blend-difference md:block"
+      transition={{
+        duration: 0.22,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="pointer-events-none fixed left-0 top-0 z-[10000] hidden rounded-full bg-white shadow-[0_0_0_1px_rgba(255,255,255,0.35),0_18px_45px_rgba(0,0,0,0.18)] mix-blend-difference will-change-transform md:block"
     />
   );
 }

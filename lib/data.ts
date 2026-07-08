@@ -212,7 +212,7 @@ export const projects = [
       "CSS",
       "JavaScript"
     ],
-    liveUrl: "https://github.com/pamoda2004/Vehicle_Assistant",
+    liveUrl: "https://github.com/pamoda2004/AI-Vehicle-Buying-Assistant",
 
     overview:
       "This project focuses on helping users make informed vehicle purchasing decisions by combining machine learning with a responsive web application. Users can search vehicles using filters such as price range, fuel type, transmission, and manufacturing year, while the system predicts fair market prices and recommends the best matching vehicles.",

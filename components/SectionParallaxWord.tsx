@@ -58,8 +58,14 @@ export default function SectionParallaxWord({
       ref={wordRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 whitespace-nowrap text-[18vw] font-black uppercase leading-none tracking-[-0.08em]",
-        dark ? "text-white/[0.045]" : "text-black/[0.04]",
+        "pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 whitespace-nowrap text-[18vw] font-black uppercase leading-none tracking-[-0.08em] transition-colors duration-300 sm:text-[17vw] md:text-[18vw]",
+
+        dark
+          ? "text-white/[0.055] dark:text-white/[0.065]"
+          : "text-black/[0.035] dark:text-white/[0.045]",
+
+        "max-sm:text-black/[0.028] max-sm:dark:text-white/[0.035]",
+
         className
       )}
     >

@@ -15,8 +15,10 @@ export default function Reveal({
 }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
+  const baseClassName = `transition-colors duration-300 ${className}`;
+
   if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
+    return <div className={baseClassName}>{children}</div>;
   }
 
   return (
@@ -33,7 +35,7 @@ export default function Reveal({
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={className}
+      className={baseClassName}
     >
       {children}
     </motion.div>
