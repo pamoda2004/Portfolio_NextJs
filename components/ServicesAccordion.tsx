@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowUpRight, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { services } from "@/lib/data";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Reveal from "./Reveal";
 import SectionParallaxWord from "./SectionParallaxWord";
 

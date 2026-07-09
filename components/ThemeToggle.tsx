@@ -9,7 +9,11 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const frame = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   if (!mounted) {
@@ -17,7 +21,7 @@ export default function ThemeToggle() {
       <button
         type="button"
         aria-label="Toggle theme"
-        className="h-10 w-10 rounded-full border border-white/15 bg-white/10 shadow-sm backdrop-blur-md"
+        className="h-10 w-10 rounded-full border border-black/10 bg-white/70 shadow-sm backdrop-blur-md dark:border-white/15 dark:bg-white/10"
       />
     );
   }

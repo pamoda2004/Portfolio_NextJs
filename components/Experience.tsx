@@ -39,18 +39,18 @@ export default function Experience() {
         <div className="space-y-4 md:space-y-0 md:divide-y md:divide-white/10">
           {experiences.map((item, index) => (
             <Reveal key={item.company} delay={index * 0.08}>
-              <div className="group relative overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.045] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm transition duration-300 hover:border-white/20 hover:bg-white/[0.07] active:bg-white/[0.07] md:grid md:grid-cols-3 md:items-center md:gap-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:py-7 md:shadow-none md:hover:bg-transparent">
+              <div className="group relative overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.045] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm transition duration-300 hover:border-white/20 hover:bg-white/[0.07] active:bg-white/[0.07] md:grid md:grid-cols-[170px_minmax(360px,520px)_minmax(220px,1fr)] md:items-center md:gap-8 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:py-8 md:shadow-none md:hover:bg-transparent lg:grid-cols-[190px_minmax(420px,560px)_minmax(260px,1fr)]">
                 <span className="absolute bottom-0 left-0 hidden h-px w-0 bg-white/80 transition-all duration-500 group-hover:w-full group-active:w-full md:block" />
 
                 <p className="mb-3 text-sm font-semibold text-white/45 transition-colors group-hover:text-white/80 group-active:text-white/80 md:mb-0 md:text-base">
                   {item.date}
                 </p>
 
-                <h3 className="text-[clamp(1.35rem,6vw,2rem)] font-black leading-tight tracking-[-0.035em] text-[#f4f4f1] transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 md:text-2xl">
+                <h3 className="text-[clamp(1.25rem,5.5vw,1.8rem)] font-black leading-tight tracking-[-0.015em] text-[#f4f4f1] transition-transform duration-300 group-hover:translate-x-1 group-active:translate-x-1 md:text-[1.85rem] md:tracking-[-0.015em] lg:text-[1.75rem] lg:tracking-[-0.01em]">
                   {item.company}
                 </h3>
 
-                <p className="mt-2 text-sm font-medium leading-6 text-white/55 transition-colors group-hover:text-white/85 group-active:text-white/85 md:mt-0 md:text-base">
+                <p className="mt-2 text-sm font-medium leading-6 tracking-[0.01em] text-white/50 transition-colors group-hover:text-white/80 group-active:text-white/80 md:mt-0 md:whitespace-nowrap md:text-[0.95rem] md:justify-self-start">
                   {item.role}
                 </p>
               </div>
