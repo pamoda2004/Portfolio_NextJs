@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
             className="mb-5 flex justify-center px-2"
           >
-            <div className="relative inline-flex h-9 w-fit min-w-[245px] max-w-[calc(100vw-48px)] items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white/70 px-5 shadow-sm backdrop-blur-md transition-colors dark:border-white/10 dark:bg-white/[0.07] sm:h-10 sm:min-w-[300px] sm:px-6">
+            <div className="relative inline-flex h-9 w-fit min-w-[260px] max-w-[calc(100vw-48px)] items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white/70 px-6 shadow-sm backdrop-blur-md transition-colors dark:border-white/10 dark:bg-white/[0.07] sm:h-10 sm:min-w-[300px] sm:px-6">
               <AnimatePresence mode="wait">
                 <motion.p
                   key={roles[roleIndex]}
@@ -50,7 +50,7 @@ export default function Hero() {
                     duration: 0.45,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="absolute whitespace-nowrap text-center text-[9px] font-black uppercase leading-none tracking-[0.12em] text-neutral-600 transition-colors dark:text-neutral-300 min-[380px]:text-[10px] min-[380px]:tracking-[0.14em] sm:text-xs sm:tracking-[0.22em]"
+                  className="absolute whitespace-nowrap text-center text-[8px] font-black uppercase leading-none tracking-[0.09em] text-neutral-600 transition-colors dark:text-neutral-300 min-[380px]:text-[9px] min-[380px]:tracking-[0.11em] sm:text-xs sm:tracking-[0.22em]"
                 >
                   {roles[roleIndex]}
                 </motion.p>
