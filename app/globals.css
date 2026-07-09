@@ -117,7 +117,7 @@ a {
 }
 
 .container-main {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1320px, calc(100% - 32px));
   margin-inline: auto;
 }
 
