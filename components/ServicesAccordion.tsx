@@ -9,22 +9,7 @@ import Reveal from "./Reveal";
 import SectionParallaxWord from "./SectionParallaxWord";
 
 export default function ServicesAccordion() {
-  const [active, setActive] = useState<number | null>(null);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      const isMobile = window.innerWidth < 768;
-      setActive(isMobile ? 0 : null);
-    };
-
-    checkScreenSize();
-
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
+  const [active, setActive] = useState<number | null>(0);
 
   return (
     <section
@@ -57,11 +42,6 @@ export default function ServicesAccordion() {
             return (
               <div
                 key={service.title}
-                onMouseEnter={() => {
-                  if (window.innerWidth >= 768) {
-                    setActive(index);
-                  }
-                }}
                 className="group border-b border-black/10 transition-colors last:border-b-0 dark:border-white/10"
               >
                 {/* Always visible row */}

@@ -303,7 +303,7 @@ export const projects = [
     gallery: [
       "/images/figma_1.png",
       "/images/figma_2.png",
-      
+
     ],
   },
   {
@@ -397,20 +397,19 @@ export const services = [
 ];
 
 export const experiences = [
-
   {
-    company: "Academic Projects",
+    company: "Digital Product Design",
+    role: "UI/UX Designer",
+    date: "2025 - Present",
+  },
+  {
+    company: "AI - Powered Applications",
     role: "AI/ML Developer",
     date: "2025 - Present",
   },
   {
-    company: "Personal Projects",
-    role: "Frontend Developer",
+    company: "Modern Web Development",
+    role: "Frontend & Full-Stack Developer",
     date: "2025 - Present",
-  },
-  {
-    company: "Freelance Practice",
-    role: "Web Designer",
-    date: "2026 - Present",
   },
 ];

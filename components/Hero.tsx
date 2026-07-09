@@ -1,10 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { profile, socialLinks } from "@/lib/data";
 import MagneticButton from "./MagneticButton";
 
+const roles = [
+  "Frontend Developer",
+  "AI/ML Developer",
+  "Full-Stack Developer",
+];
+
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((current) => (current + 1) % roles.length);
+    }, 2300);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden pb-8 pt-32 text-[var(--foreground)] transition-colors md:min-h-screen md:pb-10">
       {/* Soft background glow */}
@@ -15,14 +32,31 @@ export default function Hero() {
 
       <div className="container-main">
         <div className="mx-auto max-w-6xl text-center">
-          <motion.p
+          {/* Rotating job role */}
+          <motion.div
             initial={{ opacity: 0, y: -18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-5 text-center text-xs font-bold uppercase tracking-[0.24em] text-neutral-500 transition-colors dark:text-neutral-400 sm:text-sm sm:tracking-[0.3em]"
+            className="mb-5 flex justify-center px-2"
           >
-            {profile.role}
-          </motion.p>
+            <div className="relative inline-flex h-9 w-fit min-w-[245px] max-w-[calc(100vw-48px)] items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white/70 px-5 shadow-sm backdrop-blur-md transition-colors dark:border-white/10 dark:bg-white/[0.07] sm:h-10 sm:min-w-[300px] sm:px-6">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={roles[roleIndex]}
+                  initial={{ opacity: 0, y: 12, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: -12, filter: "blur(6px)" }}
+                  transition={{
+                    duration: 0.45,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="absolute whitespace-nowrap text-center text-[9px] font-black uppercase leading-none tracking-[0.12em] text-neutral-600 transition-colors dark:text-neutral-300 min-[380px]:text-[10px] min-[380px]:tracking-[0.14em] sm:text-xs sm:tracking-[0.22em]"
+                >
+                  {roles[roleIndex]}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+          </motion.div>
 
           <motion.h1
             initial="hidden"
