@@ -38,6 +38,8 @@
 }
 
 html {
+  height: 100%;
+  min-height: 100%;
   scroll-behavior: auto;
   max-width: 100%;
   overflow-x: clip;
@@ -46,6 +48,8 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
+  min-height: 100%;
   max-width: 100%;
   overflow-x: clip;
   background:
@@ -60,6 +64,27 @@ body {
   transition:
     background-color 0.35s ease,
     color 0.35s ease;
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.ios-bottom-cover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  height: 120px;
+  background: inherit;
+  pointer-events: none;
 }
 
 @supports not (overflow: clip) {

@@ -8,23 +8,34 @@ export default function Loader() {
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
     const alreadyShown = sessionStorage.getItem("portfolio-loader-shown");
+
+    document.body.style.overflow = "hidden";
 
     if (alreadyShown) {
       const frame = requestAnimationFrame(() => {
         setShowLoader(false);
+        document.body.style.overflow = previousOverflow;
       });
 
-      return () => cancelAnimationFrame(frame);
+      return () => {
+        cancelAnimationFrame(frame);
+        document.body.style.overflow = previousOverflow;
+      };
     }
 
     sessionStorage.setItem("portfolio-loader-shown", "true");
 
-    const timer = setTimeout(() => {
+    const timer = window.setTimeout(() => {
       setShowLoader(false);
+      document.body.style.overflow = previousOverflow;
     }, 2200);
 
-    return () => clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      document.body.style.overflow = previousOverflow;
+    };
   }, []);
 
   return (
@@ -34,14 +45,14 @@ export default function Loader() {
           initial={{ y: "0%" }}
           exit={{ y: "-100%" }}
           transition={{
-            duration: 0.9,
+            duration: 1,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="fixed left-0 top-0 z-[9999] h-[280vh] w-full overflow-hidden bg-[#f4f4f1] text-black transition-colors dark:bg-[#0f0f0f] dark:text-[#f4f4f1] md:h-[200vh]"
+          className="fullscreen-overlay z-[9999] bg-[#f4f4f1] text-black transition-colors dark:bg-[#0f0f0f] dark:text-[#f4f4f1]"
         >
-          {/* First screen content only */}
-          <div className="relative flex h-screen items-center justify-center overflow-hidden px-4">
-            {/* Soft glow */}
+          <div className="relative flex h-full items-center justify-center overflow-hidden px-4">
+            <div className="ios-bottom-cover" />
+
             <div className="pointer-events-none absolute inset-0">
               <div className="absolute left-1/2 top-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/[0.04] blur-3xl dark:bg-white/[0.055] sm:h-[420px] sm:w-[420px]" />
             </div>
