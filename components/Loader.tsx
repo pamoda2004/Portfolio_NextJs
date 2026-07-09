@@ -30,7 +30,7 @@ export default function Loader() {
     const timer = window.setTimeout(() => {
       setShowLoader(false);
       document.body.style.overflow = previousOverflow;
-    }, 5300);
+    }, 2300);
 
     return () => {
       window.clearTimeout(timer);
