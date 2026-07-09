@@ -37,7 +37,7 @@ export default function Loader() {
             duration: 0.9,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="fixed left-0 top-0 z-[9999] h-[250vh] w-full overflow-hidden bg-[#f4f4f1] text-black transition-colors dark:bg-[#0f0f0f] dark:text-[#f4f4f1] md:h-[200vh]"
+          className="fixed left-0 top-0 z-[9999] h-[280vh] w-full overflow-hidden bg-[#f4f4f1] text-black transition-colors dark:bg-[#0f0f0f] dark:text-[#f4f4f1] md:h-[200vh]"
         >
           {/* First screen content only */}
           <div className="relative flex h-screen items-center justify-center overflow-hidden px-4">

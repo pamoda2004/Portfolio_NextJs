@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowUpRight, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { services } from "@/lib/data";
@@ -110,42 +109,6 @@ export default function ServicesAccordion() {
                         }}
                         className="relative mb-4 overflow-hidden rounded-[0.95rem] border border-black/10 bg-[#252523] px-5 py-8 text-white shadow-[0_18px_45px_rgba(0,0,0,0.16)] transition-colors dark:border-white/10 dark:bg-[#151515] dark:shadow-[0_18px_45px_rgba(0,0,0,0.4)] md:px-7 md:py-10"
                       >
-                        {/* Tilted image card */}
-                        <motion.div
-                          initial={{
-                            opacity: 0,
-                            y: -30,
-                            rotate: 10,
-                            scale: 0.92,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            y: 0,
-                            rotate: 7,
-                            scale: 1,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            y: -20,
-                            rotate: 10,
-                            scale: 0.92,
-                          }}
-                          transition={{
-                            duration: 0.55,
-                            delay: 0.16,
-                            ease: [0.22, 1, 0.36, 1],
-                          }}
-                          className="pointer-events-none absolute right-7 top-[-18px] hidden w-[230px] overflow-hidden rounded-sm border border-black/10 bg-white p-2 shadow-[0_20px_50px_rgba(0,0,0,0.25)] dark:border-white/10 dark:bg-[#f4f4f1] md:block lg:w-[280px]"
-                        >
-                          <Image
-                            src={service.image}
-                            alt={service.title}
-                            width={520}
-                            height={360}
-                            className="aspect-[4/3] w-full object-cover"
-                          />
-                        </motion.div>
-
                         <div className="pointer-events-none absolute right-0 top-0 h-40 w-64 rounded-full bg-white/10 blur-3xl dark:bg-white/[0.08]" />
                         <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-64 rounded-full bg-white/[0.06] blur-3xl dark:bg-white/[0.04]" />
 
@@ -185,24 +148,6 @@ export default function ServicesAccordion() {
                             {service.description}
                           </motion.p>
                         </div>
-
-                        {/* Mobile image */}
-                        <motion.div
-                          initial={{ opacity: 0, y: 18, scale: 0.96 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          transition={{ delay: 0.34, duration: 0.45 }}
-                          className="relative mt-6 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] md:hidden"
-                        >
-                          <Image
-                            src={service.image}
-                            alt={service.title}
-                            width={520}
-                            height={360}
-                            className="aspect-[16/9] w-full object-cover"
-                          />
-
-                          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
-                        </motion.div>
                       </motion.div>
                     </motion.div>
                   )}
