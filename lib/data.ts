@@ -405,11 +405,11 @@ export const experiences = [
   {
     company: "AI - Powered Applications",
     role: "AI/ML Developer",
-    date: "2025 - Present",
+    date: "2026 - Present",
   },
   {
     company: "Modern Web Development",
     role: "Frontend & Full-Stack Developer",
-    date: "2025 - Present",
+    date: "2026 - Present",
   },
 ];
