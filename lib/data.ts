@@ -374,13 +374,13 @@ export const services = [
     title: "Frontend Development",
     description:
       "I build clean, responsive, and modern web interfaces using React, Next.js, TypeScript, and Tailwind CSS. My work focuses on smooth user experience, mobile-friendly layouts, strong visual hierarchy, and professional UI interactions.",
-    image: "/images/ful.jpg",
+    image: "/images/html.jpeg",
   },
   {
     title: "AI/ML Development",
     description:
       "I develop AI and machine learning features for real-world applications such as weather prediction, vehicle recommendation, event planning assistance, and crop stress detection using Python and ML tools.",
-    image: "/images/ml.jpg",
+    image: "/images/mach.jpeg",
   },
   {
     title: "Full-Stack Development",
@@ -392,7 +392,7 @@ export const services = [
     title: "Predictive Systems",
     description:
       "I design data-driven systems that analyze inputs and provide meaningful predictions, recommendations, and decision-support results for real-world problems.",
-    image: "/images/data.jpg",
+    image: "/images/sys.jpeg",
   },
 ];
 
