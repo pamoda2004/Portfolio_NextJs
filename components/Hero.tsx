@@ -110,7 +110,7 @@ export default function Hero() {
             className="mt-7 flex flex-wrap justify-center gap-3 md:mt-8"
           >
             <a
-              href="/cv/Pamoda-Jayathilaka-CV.pdf"
+              href="/cv/Pamoda_Jayathilaka_CV.pdf"
               download
               data-cursor="hover"
               className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_35px_rgba(0,0,0,0.18)] transition hover:scale-105 hover:shadow-xl active:scale-95 dark:bg-[#f4f4f1] dark:text-black dark:shadow-[0_14px_35px_rgba(255,255,255,0.08)] sm:px-6"
